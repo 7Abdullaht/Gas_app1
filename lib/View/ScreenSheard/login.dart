@@ -49,7 +49,8 @@ class Login extends StatelessWidget {
                                 ButtonSign(text: TextNames.labelButtonLoginAr,onTap: () {
                                 
                                 if(globalKey.currentState!.validate()){
-                                  
+                                  // if true go to HomePage Supplier
+                                  // if false go to HomePage Coustmer
                                 }
                                       
                                 },),
