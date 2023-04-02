@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:gas_app/RepatFunction/ScreenSizes.dart';
+import 'package:gas_app/Static/ColorName.dart';
 
 
 class TextFiledGas extends StatelessWidget {
@@ -19,21 +20,25 @@ TextFiledGas({required this.iconTextFiled,required this.labelText,this.obsText,t
     return Container(
             width: perWidth(context,whidth: 100),
             padding: EdgeInsets.symmetric(vertical: perHigh(context, 3)),
-            
+            margin: EdgeInsets.only(left:perHigh(context,3),right: perHigh(context, 3)),
             child: TextFormField(
-              
               controller: filedControl,
               keyboardType: inputType,
               validator: valid,
               decoration: InputDecoration(
-                hintStyle: const TextStyle(color: Colors.white),
-                hintText: labelText,
-                prefixIcon: Icon(iconTextFiled,color: Colors.white,),
-                
+                hintStyle: const TextStyle(color: Colors.black12),
+                labelText: labelText,
+                prefixIcon: Icon(iconTextFiled,color: Colors.black,),
+              
                 filled: true,
-                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(perHigh(context,5)),borderSide: const BorderSide(style: BorderStyle.none)),
-                focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(perHigh(context,5)),borderSide: const BorderSide(style: BorderStyle.none)),
-                fillColor: Colors.deepOrange.shade300, 
+                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(perHigh(context,5)),borderSide: const BorderSide(style: BorderStyle.none)
+                ),
+                focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(perHigh(context,5)),borderSide: const BorderSide(style: BorderStyle.none ),
+               
+                ),
+               
+                fillColor: ColorName.RegistercolorTextFiled,
+
                 ),
                 obscureText: obsText!,
                 

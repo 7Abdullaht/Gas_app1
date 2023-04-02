@@ -6,4 +6,5 @@ class ColorName {
   static const lightred = Color.fromARGB(255, 231, 25, 14);
   static const Color  beginColorLogin =  Color(0xfff5631f);
   static const Color  endColorLogin =  Color.fromARGB(255, 255, 143, 45);
+  static const Color  RegistercolorTextFiled =  Color(0xfffF5F4F4);
 }

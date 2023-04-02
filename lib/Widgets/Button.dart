@@ -16,7 +16,7 @@ class ButtonSign extends StatelessWidget {
       onTap: onTap,
       child: Container(
         margin: EdgeInsets.all(25),
-        width: perWidth(context,whidth: 60),
+        width: perWidth(context,whidth: 75),
         height: perHigh(context, 10),
         decoration: BoxDecoration(
           // ignore: prefer_const_constructors
