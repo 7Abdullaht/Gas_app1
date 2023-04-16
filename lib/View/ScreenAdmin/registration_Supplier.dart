@@ -14,6 +14,7 @@ class register_suoolier extends StatelessWidget {
   final TextEditingController phone = TextEditingController();
   final TextEditingController password = TextEditingController();
    final TextEditingController name = TextEditingController();
+     final TextEditingController passwordCon = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +64,7 @@ class register_suoolier extends StatelessWidget {
                                 valid: (val) {
                                 return phoneOrNameFiled(val!,min: 3,max: 20);
                                 },
-                                filedControl: password,
+                                filedControl: passwordCon,
               ),
               ButtonSign(text: TextNames.labelButtonLoginAr,onTap: () {
                                 
