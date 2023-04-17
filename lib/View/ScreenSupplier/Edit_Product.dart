@@ -5,7 +5,8 @@ import 'package:get/get.dart';
 
 
 import '../../Controllers/Supplier_controller.dart';
-import '../../Static/TextFiled1.dart';
+
+import '../../Widgets/TextFiled1.dart';
 import '../../model/iteam.dart';
 
 

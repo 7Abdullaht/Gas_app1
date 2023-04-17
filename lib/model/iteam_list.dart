@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import 'iteam.dart';
@@ -28,4 +29,25 @@ List<dataconsumer> consumer=[
   dataconsumer("عامر",735567645," الغار الاحمر", "الديس", "2022/3/2"),
 ];
 
+//// هذا عناصر خاصة بصفحة المورد
+List<MyHome>myhome=[
+  MyHome(Icons.shopping_cart, "صفحة الطلبات ",),
+  MyHome(Icons.add_shopping_cart, "اضافة منتج")
+];
+List<Myorder>order=[
+Myorder(1,"امين", "عامر", "2020/20/3", "حجز"),
+Myorder(1,"عبدالله", "امين", "2020/20/3", "حجز"),
+Myorder(1,"عبدربه", "عادل", "2020/20/5", "حجز"),
+
+];
+
+final Addproduct=<Product>[
+].obs;
+
+
+List<notification> listnotification=[
+  notification("منتجات", "تم اضافة منتجات جديدة","7:30 AM","Logo.png"), 
+  notification("اضافك في تطبيق", "تم قبول طلبك ","8:00 AM",'Logo.png'),
+
+];
 

@@ -1,13 +1,11 @@
   import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-
-
-
+import '../../Controllers/Tapcontrooler.dart';
+import '../../Static/ColorName.dart';
 import 'data_consumer.dart';
 import 'view_data_consumer.dart';
-
-class MyHomePage extends StatelessWidget {
+class view_data_consumer  extends StatelessWidget { 
+  final MyController controller = Get.put(MyController());
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -15,9 +13,16 @@ class MyHomePage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text('ادارة العملاء'),
-          bottom: 
-          TabBar(            
+          backgroundColor: ColorName.colorblue,
+          bottom:  
+             
+          TabBar(
+            indicatorColor: Colors.white,
+             controller: controller.tabController,
+          
+                    
             tabs: [
+              
               Tab(
                 
                 text: 'عرض بيانات العملاء ',
@@ -30,11 +35,13 @@ class MyHomePage extends StatelessWidget {
           ),
         ),
         body: TabBarView(
-          children: [
-            data_consumer(),
-            Myscreen(),
-          ],
-        ),
+                controller: controller.tabController,
+            children: [
+              data_consumer(),
+              viwe_data_consumer(),
+            ],
+          ),
+       
       ),
     );
   }

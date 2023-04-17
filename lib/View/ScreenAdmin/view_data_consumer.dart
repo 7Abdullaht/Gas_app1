@@ -1,25 +1,25 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-class Myscreen extends StatelessWidget {
+
+import '../../model/iteam_list.dart';
+
+
+
+class viwe_data_consumer extends StatelessWidget {
   
  
-  List myscreen=[{
-    "الاسم":"امين",
-    "التاريخ":"2023/2/2",
-    "رقم جوال":"735567645",
-    "الحي":"المتضررين",
-    "المنطقة":"فوة",
+  
 
-  }
 
-  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body: ListView.builder(itemCount:myscreen.length,itemBuilder: (context,i) {
+      body: ListView.builder(itemCount:consumer.length,itemBuilder: (context,i) {
             return Container(
            height: 400,
           width:double.infinity,
@@ -38,18 +38,18 @@ class Myscreen extends StatelessWidget {
                       margin: EdgeInsets.only(top: 15),
                       child: Icon(Icons.person,size: 100, color: Color(0xff0F4C81),),
                     ),
-                    Text("${myscreen[i]["الاسم"]}",style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text("${consumer[i].name}",style: TextStyle(fontWeight: FontWeight.bold)),
                   ],
                   ),
                   Row( 
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Row(children: [
-                        Icon(Icons.date_range,color: Color(0xff0F4C81),), Text("التاريخ: ${myscreen[i]["التاريخ"]}",style: TextStyle(fontWeight: FontWeight.bold)),
+                        Icon(Icons.date_range,color: Color(0xff0F4C81),), Text("التاريخ: ${consumer[i].date}",style: TextStyle(fontWeight: FontWeight.bold)),
 
                       ],),
                       Row(children: [
-                        Icon(Icons.phone,color: Color(0xff0F4C81)),Text("الجوال: ${myscreen[i]["رقم جوال"]}",style: TextStyle(fontWeight: FontWeight.bold))
+                        Icon(Icons.phone,color: Color(0xff0F4C81)),Text("الجوال: ${consumer[i].phone}",style: TextStyle(fontWeight: FontWeight.bold))
                       ],)
                   ],
                   ),
@@ -62,12 +62,12 @@ class Myscreen extends StatelessWidget {
                     children: [
                       Row(children: [
                          Icon(Icons.location_on,color: Color(0xff0F4C81),),
-                          Text(" الحي: ${myscreen[i][ "الحي"]}",style: TextStyle(fontWeight: FontWeight.bold),),
+                          Text(" الحي: ${consumer[i].Block}",style: TextStyle(fontWeight: FontWeight.bold),),
 
                       ],),
                       Row(children: [
                          Icon(Icons.location_on,color: Color(0xff0F4C81),),
-                           Text(" المنطقة: ${myscreen[i][ "المنطقة"]}",style: TextStyle(fontWeight: FontWeight.bold))
+                           Text(" المنطقة: ${consumer[i].Areas}",style: TextStyle(fontWeight: FontWeight.bold))
                       ],)
                   ],
                   ),

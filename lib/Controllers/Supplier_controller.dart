@@ -1,0 +1,20 @@
+import 'package:get/get.dart';
+import '../model/iteam.dart';
+import '../model/iteam_list.dart';
+
+
+class ProductController extends GetxController {
+  
+
+  void addProduct(Product product) {
+    Addproduct.add(product);
+  }
+
+  void editProduct(int index, Product product) {
+    Addproduct[index] = product;
+  }
+
+  void deleteProduct(int index) {
+    Addproduct.removeAt(index);
+  }
+}
