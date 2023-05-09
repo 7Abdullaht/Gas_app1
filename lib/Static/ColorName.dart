@@ -7,6 +7,4 @@ class ColorName {
   static const Color  beginColorLogin =  Color(0xffFD6C69);
   static const Color  endColorLogin =  Color.fromARGB(255, 255, 143, 45);
   static const colorblue = Color(0xff528fbc);
-   
-
 }

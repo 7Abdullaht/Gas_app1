@@ -63,14 +63,14 @@ class MyHome{
  
   MyHome(this.icon,this.title,);
 }
-class Myorder{
+class Mangmentorder{
   final int id;
   final String nameConsumer;
   final String namesupplier;
   final String date;
   final String nameservies;
 
-  Myorder(this.id,this.nameConsumer,this.namesupplier,this.date,this.nameservies,);
+  Mangmentorder(this.id,this.nameConsumer,this.namesupplier,this.date,this.nameservies,);
 }
 class Product {
   int Id;
@@ -87,4 +87,29 @@ String description;
 String time;
 String images;
 notification(this.title,this.description,this.time,this.images);
+}
+
+
+
+/// كلاسات العملاء
+///سلة الكلاس صفحة 
+class Basket{
+final String images;
+final int Total;
+final String NameProdect;
+final int quantity;
+final int price;
+Basket(this.NameProdect,this.Total,this.images,this.quantity,this.price);
+}
+
+/// الكلاس صفحة myorder
+class consumerOrderpage{
+  final String images;
+  final String productsName;
+  final String dateorder;
+  final int  quantity;
+  final double totalPrice;
+  final String servertypes;
+  consumerOrderpage(this.productsName,this.images,this.dateorder,this.totalPrice,this.quantity,this.servertypes);
+
 }

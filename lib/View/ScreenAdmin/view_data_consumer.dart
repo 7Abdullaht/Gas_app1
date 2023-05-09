@@ -2,19 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-
-
 import '../../model/iteam_list.dart';
-
-
-
 class viwe_data_consumer extends StatelessWidget {
-  
- 
-  
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +19,6 @@ class viwe_data_consumer extends StatelessWidget {
               elevation: 10,
                 child: Column(    
                   children: [
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -76,9 +64,6 @@ class viwe_data_consumer extends StatelessWidget {
                     width: 100,
                     color: Color(0xfffD4CDCA),
                   ),
-                  
-                 
-                    
                  Padding(
                    padding: const EdgeInsets.only(top:5),
                    child: Row(
@@ -93,7 +78,6 @@ class viwe_data_consumer extends StatelessWidget {
                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                         splashColor:Color(0xff00a651) ,
                        ),
-                      
                     ],
                    ),
                  )
