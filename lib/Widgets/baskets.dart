@@ -10,101 +10,65 @@ class myBasket extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: ListView.builder(
-      itemCount: Basketlist.length,
-      itemBuilder:((context, index) {
-      return Card(
-         shape: RoundedRectangleBorder(side: BorderSide(width: 3,color: Color(0xfff1cc97)),borderRadius: BorderRadius.circular(15)),
-      elevation: 10,
-      child: Row(children: [
-
-        Container(
-          width: 220,
-          height: 150,
-          padding: EdgeInsets.only(top:5,left: 0),
-         color: Color(0xfff8f8f8),
-          child: Column(children: [
-            Row(
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: SafeArea(child: ListView.builder(
+        itemCount: Basketlist.length,
+        itemBuilder:((context, index) {
+        return Card(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+        elevation: 10,
+        child:Row(
+          //mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 5),
-              child: CircleAvatar(
-                backgroundColor: Colors.red,
-                child: IconButton(onPressed: (){}, icon:Icon(Icons.close,size:22,color: Colors.white, ))),
-            ),
+          Container(child: Image.asset("images/${Basketlist[index].images}",height: 100,),),
+          Expanded(
+          flex: 2,  
+          child:ListTile(
+          title:Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+            
+            Text("${Basketlist[index].NameProdect}",style: TextStyle(fontSize: 20,color: Color(0xffa0a0a0),fontWeight: FontWeight.bold),),
           ],
-        ), 
+          ),  
+          subtitle: Column(children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-             Row(
-              children: [
-                Text("${Basketlist[index].quantity}") 
+              Row(children: [
+                Text(TextNames.quantityname),
+                Text("${Basketlist[index].quantity}",style: TextStyle(fontSize: 18),),
+
               ],
-             ),
-             Row(children: [
-              Text(TextNames.quantityname),
-             ],
-             ),
+              ),
+              Row(children: [
+              InkWell(
+                child:Icon(Icons.delete,size: 30,color: Colors.red,),
+                onTap:(){},
+              ) 
+
               ],
+              ),
+           
+            ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-             
              Row(children: [
-              Text("نوع الخدمة "),
-             ],
-             ),
-              ],
-            ),
-             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-             Row(
-              children: [
-                Text("${Basketlist[index].Total}")
-              ],
-             ),
-             Row(children: [
-              Text(TextNames.pricename),
-             ],
-             ),
-              ],
-            ),       
+              Text(TextNames.pricename,style: TextStyle(fontSize: 18,color: Colors.black),),
+              Text("${Basketlist[index].price}",style: TextStyle(fontSize: 18,color:Colors.black,fontWeight: FontWeight.bold),)
+            ],
+            )
           ],
           ),
           ),
-          Expanded(child: Container(
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                  Row(
-                    children: [
-                     Padding(
-                       padding: const EdgeInsets.only(left: 15),
-                       child: Text("${Basketlist[index].NameProdect}",style: TextStyle(fontSize: 17,color: ColorName.colorblue, ),),
-                     ),
-                    ],
-                    ),
-                    Row(children: [ 
-                    Image.asset("images/${Basketlist[index].images}",width: 60,),
-                    ],
-                  ),
-                ],
-                ),
-              ],
-            ),
           )
-          )
-      ],
+        ],
+        )
+      );
+      }
+      )
+      )
       ),
-    );
-    }
-    )
-    )
     );
   }
 }

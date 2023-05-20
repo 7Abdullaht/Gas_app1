@@ -37,7 +37,7 @@ TextFiledGas({required this.iconTextFiled,required this.labelText,this.obsText,t
                
                 ),
                
-                fillColor: ColorName.colorblue,
+                //fillColor: ColorName.colorblue,
 
                 ),
                 obscureText: obsText!,

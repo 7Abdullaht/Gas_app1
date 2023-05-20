@@ -6,11 +6,11 @@ import '../model/iteam_list.dart';
 class ProductController extends GetxController {
   
 
-  void addProduct(Product product) {
+  void addProduct(Products product) {
     Addproduct.add(product);
   }
 
-  void editProduct(int index, Product product) {
+  void editProduct(int index, Products product) {
     Addproduct[index] = product;
   }
 

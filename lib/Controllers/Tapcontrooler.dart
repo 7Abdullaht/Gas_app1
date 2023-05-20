@@ -9,6 +9,4 @@ class MyController extends GetxController with SingleGetTickerProviderMixin {
     super.onInit();
     tabController = TabController(length: 2, vsync: this,initialIndex: 1);
   }
-
-  
 }

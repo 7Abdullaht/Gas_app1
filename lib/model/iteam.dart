@@ -72,14 +72,14 @@ class Mangmentorder{
 
   Mangmentorder(this.id,this.nameConsumer,this.namesupplier,this.date,this.nameservies,);
 }
-class Product {
-  int Id;
+class Products {
+ 
   String description;
   int quantity;
   double price;
   String image;
 
-  Product({required this.Id, required this.description, required this.quantity, required this.price, required this.image});
+  Products({ required this.description, required this.quantity, required this.price, required this.image});
 }
 class notification{
 String title;

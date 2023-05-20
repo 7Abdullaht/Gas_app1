@@ -60,7 +60,7 @@ title: Text('Edit Product'),
            
             TextFiledGas(
               filedControl: descriptionController,
-              obsText: true,
+              obsText: false,
               inputType: TextInputType.streetAddress,
               labelText: TextNames.descriptionName,
               iconTextFiled: Icons.delete,
@@ -75,7 +75,7 @@ title: Text('Edit Product'),
            ),
             TextFiledGas(
               filedControl: priceController,
-              obsText: true,
+              obsText: false,
               inputType: TextInputType.number,
               labelText: TextNames.pricename,
               iconTextFiled: Icons.delete,

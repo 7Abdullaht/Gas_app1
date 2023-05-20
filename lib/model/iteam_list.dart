@@ -41,7 +41,7 @@ Mangmentorder(1,"عبدربه", "عادل", "2020/20/5", "حجز"),
 
 ];
 
-final Addproduct=<Product>[
+final Addproduct=<Products>[
 ].obs;
 List<notification> listnotification=[
   notification("منتجات", "تم اضافة منتجات جديدة","7:30 AM","Logo.png"), 
@@ -51,11 +51,11 @@ List<notification> listnotification=[
 
 
 /// هذا العناصر خاصة بالعملاء 
-List<Product> products=[
-Product(Id: 1, description: "استبدال الغاز", quantity: 200, price: 7000, image:"12.png"),
-  Product(Id: 2, description: "شراء الغاز", quantity: 200, price: 20000, image:"13.png"),
-  Product(Id: 2, description: "اسبدال الغاز", quantity: 200, price: 20000, image:"13.png"),
-   Product(Id: 2, description: "شراء الغاز", quantity: 200, price: 20000, image:"12.png")
+List<Products> products=[
+Products( description: "استبدال الغاز", quantity: 200, price: 7000, image:"12.png"),
+Products( description: "شراء الغاز", quantity: 200, price: 20000, image:"13.png"),
+Products( description: "اسبدال الغاز", quantity: 200, price: 20000, image:"13.png"),
+Products( description: "شراء الغاز", quantity: 200, price: 20000, image:"12.png")
 ];
 
 List<Basket>Basketlist=[

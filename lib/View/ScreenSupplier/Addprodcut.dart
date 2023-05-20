@@ -45,7 +45,8 @@ class AddProductPage extends StatelessWidget {
               SizedBox(height: 16.0),
               TextFiledGas(
               filedControl: descriptionController,
-              obsText: true,
+              obsText:false,
+
               inputType: TextInputType.streetAddress,
               labelText: TextNames.descriptionName,
               iconTextFiled: Icons.delete,
@@ -59,7 +60,7 @@ class AddProductPage extends StatelessWidget {
              const SizedBox(height: 16.0),
              TextFiledGas(
               filedControl: descriptionController,
-              obsText: true,
+              obsText: false,
               inputType: TextInputType.streetAddress,
               labelText: TextNames.descriptionName,
               iconTextFiled: Icons.delete,

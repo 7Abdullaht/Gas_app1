@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:gas_app/View/ScreenAdmin/Complaint.dart';
 import 'package:get/get.dart';
-
 import '../../Controllers/ComplaintsController.dart';
 import '../../Static/ColorName.dart';
-
 
 class ComplaintsAdminPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfff6f6f8),
       appBar: AppBar(
         title: Text('إدارة الشكاوي'),
         backgroundColor: ColorName.colorblue,
+        centerTitle: true,
       ),
       body: Container(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 16.0),
+            SizedBox(height: 10.0),
             Text(
               'قائمة الشكاوي',
               style: TextStyle(
@@ -46,7 +46,8 @@ class ComplaintsAdminPage extends StatelessWidget {
                       itemBuilder: (context, index) {
                         final complaint = controller.complaints[index];
                         return Card(
-                          elevation: 5,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                          elevation: 15,
                           color: ColorName.colorblue,
                           child: ListTile(
                             title: Text(complaint.title,style: TextStyle(color: Colors.white),),
@@ -55,20 +56,18 @@ class ComplaintsAdminPage extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 IconButton(
-                                  icon: Icon(Icons.delete,color: Colors.white,),
+                                  icon: Icon(Icons.delete,color: Colors.red,),
                                   onPressed: () {
                                     controller.deleteComplaint(complaint);
                                   },
-                                  
                                 ),
                                  IconButton(onPressed: () {
-                                  Get.to(Complaint());
+                                //  Get.to(Complaint());
                                  },
                                  icon: Icon(Icons.reply,size: 25,color: Colors.white,),
                             ),
                               ],
                             ),
-                          
                           ),
                         );
                       },
