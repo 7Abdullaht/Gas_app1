@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gas_app/View/ScreenConsumer/Homepage.dart';
 import 'package:get/get.dart';
 import '../../Controllers/NvgationController.dart';
 import '../../Static/ColorName.dart';
@@ -19,8 +20,8 @@ class NvgtionBar extends StatelessWidget {
             return const Products();
           case 1:
             return const Basket();
-          //case 2:
-            //return  detailesscreen();
+          case 2:
+            return  HomePage();
             case 3:
             return const MyOrder();
             case 4:
