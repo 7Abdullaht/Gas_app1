@@ -6,24 +6,27 @@ import 'package:get/get.dart';
 
 import '../../Controllers/Supplier_controller.dart';
 
+import '../../Widgets/Counter.dart';
 import '../../Widgets/TextFiled1.dart';
+import '../../Widgets/textFiled.dart';
 import '../../model/iteam.dart';
+
 
 
 class EditProductPage extends StatelessWidget {
 final ProductController productController = Get.find<ProductController>();
 
-final Product product;
+final Products product;
 final int index;
 
-final idController = TextEditingController();
+
 final descriptionController = TextEditingController();
 final quantityController = TextEditingController();
 final priceController = TextEditingController();
 final imageController = TextEditingController();
 
 EditProductPage({required this.product, required this.index}) {
-idController.text = product.Id.toString();
+
 descriptionController.text = product.description;
 quantityController.text = product.quantity.toString();
 priceController.text = product.price.toString();
@@ -35,63 +38,57 @@ Widget build(BuildContext context) {
 return Scaffold(
 appBar: AppBar(
 title: Text('Edit Product'),
- backgroundColor:ColorName.colorblue,
+ backgroundColor: Color(0xff528fbc),
 ),
-body: Padding(
-padding: const EdgeInsets.all(16.0),
-child: Column(
-children: [
-Textfiled(
-filedControl: idController,
-obsText: true,
-inputType: TextInputType.streetAddress,
-labelText: TextNames.prodcutnum,
-valid: ((p0) {
-  
-}),
-
-),
-Textfiled(
-filedControl: descriptionController,
-obsText: true,
-inputType: TextInputType.streetAddress,
-labelText: TextNames.descriptionName,
-valid: ((p0) {
-  
-}),
-
-),
-Textfiled(
-filedControl: quantityController,
-obsText: true,
-inputType: TextInputType.number,
-labelText: TextNames.quantityname,
-valid: (val){},
-
-),
-Textfiled(
-filedControl: priceController,
-obsText: true,
-inputType: TextInputType.number,
-labelText: TextNames.pricename,
-valid: (val){},
-
-),
-Textfiled(
-filedControl: imageController,
-obsText: true,
-inputType: TextInputType.streetAddress,
-
-labelText: 'Image',
-valid: ((p0) {
-  
-}),
-),
+     body: Padding(
+     padding: const EdgeInsets.all(16.0),
+     child: Column(
+     children: [
+       Expanded(
+              child: Container(
+                width: 150,
+                height: 150,
+                decoration: BoxDecoration(
+                border: Border.all(width: 2, color: Colors.black),
+                ),
+                child: InkWell(
+                  child: Icon(Icons.camera_alt),
+                  onTap: () {},
+                ),
+              ),
+            ),  
+           
+            TextFiledGas(
+              filedControl: descriptionController,
+              obsText: true,
+              inputType: TextInputType.streetAddress,
+              labelText: TextNames.descriptionName,
+              iconTextFiled: Icons.delete,
+              valid: ((p0) {
+                
+              }),
+            ),
+           Card(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+             child: Counter(
+             ),
+           ),
+            TextFiledGas(
+              filedControl: priceController,
+              obsText: true,
+              inputType: TextInputType.number,
+              labelText: TextNames.pricename,
+              iconTextFiled: Icons.delete,
+              valid: (p0) {
+                
+              },
+            
+            ),
 ElevatedButton(
 child: Text('تعديل'),
 onPressed: () {
-final updatedProduct = Product(
-Id: int.parse(idController.text),
+final updatedProduct = Products(
+
 description: descriptionController.text,
 quantity: int.parse(quantityController.text),
 price: double.parse(priceController.text),

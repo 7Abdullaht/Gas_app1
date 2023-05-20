@@ -19,8 +19,8 @@ class NvgtionBar extends StatelessWidget {
             return const Products();
           case 1:
             return const Basket();
-          case 2:
-            return  detailesscreen();
+          //case 2:
+            //return  detailesscreen();
             case 3:
             return const MyOrder();
             case 4:
